@@ -1,13 +1,13 @@
 const Person = (props) => {
-  const { id, name, age, image } = props.details;
+  const { id, name, age, image } = props;
   return (
-    <div className="person">
-      <img src={image} alt={id} />
+    <article className="person">
+      <img src={image} alt={image} className="img" />
       <div>
         <h4>{name}</h4>
         <p>{age} years</p>
       </div>
-    </div>
+    </article>
   );
 };
 export default Person;

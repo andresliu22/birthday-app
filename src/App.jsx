@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import data from './data';
-import Person from './Person';
+import List from './List';
 
 const App = () => {
   const [people, setPeople] = useState(data);
@@ -14,10 +14,12 @@ const App = () => {
     <main>
       <section className="container">
         <h3>{people.length} Birthdays Today</h3>
-        {people.map((person) => {
-          return <Person details={person} />;
-        })}
-        <button type="button" className="btn" onClick={clearAllPeople}>
+        <List people={people} />
+        <button
+          type="button"
+          className="btn btn-block"
+          onClick={clearAllPeople}
+        >
           Clear all
         </button>
       </section>
